@@ -43,6 +43,11 @@ class PermamailTemplateVariable extends DataObject {
 			ClassInfo::subclassesFor('DataObject')
 		);
 		unset($map['DataObject']);
+		foreach($map as $k => $class) {
+			if(ClassInfo::classImplements($class, 'TestOnly')) {
+				unset($map[$class]);
+			}
+		}
 		ksort($map);
 
 		$f = FieldList::create(TabSet::create('Root'));

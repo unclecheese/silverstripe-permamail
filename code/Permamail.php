@@ -16,6 +16,9 @@
  * @package  silverstripe-permamail
  * 
  */
+
+
+
 class Permamail extends Email {
 
 	/**
