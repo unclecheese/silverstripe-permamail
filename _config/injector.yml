@@ -1,0 +1,7 @@
+---
+Name: permamail
+After: 'framework/*'
+---
+Injector:
+  Email:
+    class: Permamail
