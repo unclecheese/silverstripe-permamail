@@ -136,7 +136,9 @@ class PermamailTemplate extends DataObject {
 			$vars[$block->getName()] = $block->isLoop();
 		}
 		// Remove any variables that are no longer in the template
-		$this->TestVariables()->exclude(array('Variable' => array_keys($vars)))->removeAll();
+		if($this->TestVariables()->exists()) {
+			$this->TestVariables()->exclude(array('Variable' => array_keys($vars)))->removeAll();
+		}
 		
 		$currentVars = $this->TestVariables()->column('Variable');
 

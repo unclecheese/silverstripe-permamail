@@ -97,6 +97,9 @@ class Permamail extends Email {
 		if($this->members) {
 			foreach($this->members as $m) {
 				$this->setTo($m->Email);
+				$this->populateTemplate(array(
+					'RecipientMember' => $m
+				));
 				if($plain) {
 					parent::sendPlain($messageID);
 				}
