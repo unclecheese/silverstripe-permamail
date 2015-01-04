@@ -146,7 +146,10 @@ class Permamail extends Email {
 	public function setUserTemplate($identifier) {
 		$template = PermamailTemplate::get_by_identifier($identifier);
 		if(!$template) {
-			throw new RuntimeException("Email template $identifier could not be found");
+			$template = PermamailTemplate::create(array(
+				'Identifier' => $identifier,
+			));
+			$template->write();
 		}
 		
 		$this->userTemplate = $identifier;

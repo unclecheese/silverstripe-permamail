@@ -30,6 +30,10 @@ class PermamailTemplate extends DataObject {
 		'Subject' => 'Default subject'
 	);
 
+	private static $defaults = array (
+		'Content' => "<html>\n<body>\n\n</body>\n</html>"
+	);
+
 	private static $singular_name = 'Email template';
 
 	private static $plural_name = 'Email templates';
