@@ -44,25 +44,25 @@ Permamail provides a new `ModelAdmin` interface called `Email`, which provides t
 ### Outbound Emails 
 Shows a list of all emails sent. Offers an option to resend.
 
-![screenshot](http://image.yogile.com/f2kl9eur/ixplmhzeflfceuzm6m39eh-large.png)
+![screenshot](https://cloud.githubusercontent.com/assets/654636/5621941/a9e07c5a-95a0-11e4-8cf3-1f2c16fac24f.png)
 
-![screenshot](http://image.yogile.com/f2kl9eur/ixplmhxse2ymk3t24uq3hp-large.png)
+![screenshot](https://cloud.githubusercontent.com/assets/654636/5621942/aa16c4ea-95a0-11e4-9599-982b43f5c147.png)
 
 ### Email templates
 Allows creation of user-defined templates, with default subjects and "From" addresses.
 
-![screenshot](http://image.yogile.com/f2kl9eur/ixplmh7iqa7zlvo9pryd4a-large.png)
+![screenshot](https://cloud.githubusercontent.com/assets/654636/5621944/aa3abb20-95a0-11e4-9cb8-e7f6d457cd45.png)
 
 ### Sending test emails
 
-![screenshot](http://image.yogile.com/f2kl9eur/ixplmhlowmyogsfme63n1q-large.png)
+![screenshot](https://cloud.githubusercontent.com/assets/654636/5621943/aa38dabc-95a0-11e4-9c0e-c482b4b4e501.png)
 
 Every user-defined template can send a test email, and populate the template with the variables you have specified. To do this, the template uses the `ReflectionTemplate` class to gather all the variables and blocks in the template, and offers you the opportunity to customise what values are assigned to those variables. Options include:
 * A static value (e.g. hardcoded)
 * A random object from the database of a given ClassName
 * A specific object from the database of a given ClassName
 
-![screenshot](http://image.yogile.com/f2kl9eur/ixplmhankqylmal8griu5w-large.png)
+![screenshot](https://cloud.githubusercontent.com/assets/654636/5621945/aa3d0556-95a0-11e4-96e0-239033322d55.png)
 
 #### Querying specific records to inject into your template
 To run a custom query, you can use a query string like an array is used in the `filter()` method of the ORM, for example: `Category=gardening&Title:StartsWith=A&Created:LessThan=2014-11-11`
