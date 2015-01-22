@@ -5,7 +5,6 @@ $('textarea.ace').entwine({
 
 	onmatch: function () {		
 		this.setInterval(window.setInterval(function () {
-			console.log('ping');
 			if(this.is(':visible')) {
 				this.ace({
 					theme: 'chrome',

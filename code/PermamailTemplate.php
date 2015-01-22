@@ -11,7 +11,7 @@ class PermamailTemplate extends DataObject {
 
 	private static $db = array (
 		'Identifier' => 'Varchar',
-		'Subject' => 'Varchar',
+		'Subject' => 'Varchar(255)',
 		'From' => 'Varchar',
 		'Content' => 'HTMLText',
 		'TestEmailAddress' => 'Varchar'
@@ -157,6 +157,16 @@ class PermamailTemplate extends DataObject {
 			}
 		}
 	}
+
+
+	/**
+	 * Better than a numeric ID...
+	 * @return string
+	 */
+	public function getTitle() {
+		return $this->Identifier;
+	}
+	
 
 	/**
 	 * Defines the view permission
