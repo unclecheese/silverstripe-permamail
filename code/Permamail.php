@@ -100,16 +100,12 @@ class Permamail extends Email {
 				$this->populateTemplate(array(
 					'RecipientMember' => $m
 				));
-				if($plain) {
-					parent::sendPlain($messageID);
-				}
-				else {
-					parent::send($messageID);
-				}
-				$this->persist();
 			}
 		}
 
+		if($this->config()->test_mode) {
+			$this->parseVariables($plain);
+		}
 		else {
 			if($plain) {
 				parent::sendPlain($messageID);
@@ -117,9 +113,9 @@ class Permamail extends Email {
 			else {
 				parent::send($messageID);
 			}
-		
-			$this->persist();
-		}		
+		}
+
+		$this->persist();
 	}
 
 	/**
