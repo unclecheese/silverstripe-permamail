@@ -5,3 +5,7 @@ After: 'framework/*'
 Injector:
   Email:
     class: Permamail
+  Member_ForgotPasswordEmail:
+    class: Email  
+  Member_ChangePasswordEmail:
+    class: Email
