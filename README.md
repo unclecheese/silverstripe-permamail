@@ -8,7 +8,7 @@ This module adds several enhancements to the core `Email` class in SilverStripe:
 * Send emails to a `DataList` of Members
 
 ## Installation
-`composer require unclecheese/permamail:dev-master`
+`composer require unclecheese/silverstripe-permamail:dev-master`
 
 ## Requirements
 * SilverStripe 3.1.*
