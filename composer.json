@@ -12,7 +12,7 @@
     "require": {
         "silverstripe/framework": "~3.1",
         "unclecheese/betterbuttons": "~1.2",
-        "unclecheese/display-logic": "dev-master",
+        "unclecheese/display-logic": "~1.2",
         "unclecheese/reflection-templates": "dev-master"
     }
     
