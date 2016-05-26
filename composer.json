@@ -10,9 +10,9 @@
         "email": "unclecheese@leftandmain.com"
     }],
     "require": {
-        "silverstripe/framework": "~3.2",
+        "silverstripe/framework": "~3.1",
         "unclecheese/betterbuttons": "~1.3",
-        "unclecheese/display-logic": "~1.3",
+        "unclecheese/display-logic": "~1.2",
         "unclecheese/reflection-templates": "dev-master"
     }
     
