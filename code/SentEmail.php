@@ -41,7 +41,6 @@ class SentEmail extends DataObject {
 	public function getBetterButtonsActions() {
 		$fields = parent::getBetterButtonsActions();
 		$fields->push(BetterButtonCustomAction::create('resend','Resend')
-			->setSuccessMessage('Resent')
 			->setRedirectType(BetterButtonCustomAction::REFRESH)
 		);
 		
@@ -90,6 +89,8 @@ class SentEmail extends DataObject {
 		if($e = $this->getEmail()) {
 			return $e->send();
 		}
+
+		return 'Sent';
 	}
 
 	/**
