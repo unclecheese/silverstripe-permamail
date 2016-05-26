@@ -54,8 +54,7 @@ class PermamailTemplate extends DataObject {
 	public function getBetterButtonsActions() {
 		$f = parent::getBetterButtonsActions();
 		$f->push(BetterButtonCustomAction::create('testemail','Send a test')
-			->setRedirectType(BetterButtonCustomAction::REFRESH)
-			->setSuccessMessage('Test email sent to ' . $this->TestEmailAddress)
+			->setRedirectType(BetterButtonCustomAction::REFRESH)			
 		);
 
 		return $f;
@@ -109,6 +108,8 @@ class PermamailTemplate extends DataObject {
 			->setUserTemplate($this->Identifier)
 			->populateTemplate($vars)
 			->send();
+
+		return 'Test email sent to ' . $this->TestEmailAddress;
 	}
 
 	/**
