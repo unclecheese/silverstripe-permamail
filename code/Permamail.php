@@ -71,6 +71,9 @@ class Permamail extends Email {
 	 * @param  boolean $plain     	 
 	 */
 	protected function doSend($messageID = null, $plain = false) {
+
+		$this->extend('onBeforeDoSend', $this);
+
 		if(!$this->Subject() && $this->getUserTemplate()) {
 			$this->setSubject($this->getUserTemplate()->Subject);
 		}
@@ -111,6 +114,8 @@ class Permamail extends Email {
 				parent::send($messageID);
 			}
 		}
+
+		$this->extend('onAfterDoSend', $this);
 
 		$this->persist();
 	}
