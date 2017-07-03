@@ -43,6 +43,8 @@ class SentEmail extends DataObject {
 		$fields->push(BetterButtonCustomAction::create('resend','Resend')
 			->setRedirectType(BetterButtonCustomAction::REFRESH)
 		);
+
+		$this->extend('updateBetterButtonsActions', $fields);
 		
 		return $fields;
 	}
@@ -66,6 +68,8 @@ class SentEmail extends DataObject {
 			HeaderField::create('Email contents', 5),
 			LiteralField::create('BodyContents', "<div class='field'>{$contents}</div>")
 		);
+
+		$this->extend('updateCMSFields', $f);
 
 		return $f;
 	}

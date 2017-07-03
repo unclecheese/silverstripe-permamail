@@ -57,6 +57,8 @@ class PermamailTemplate extends DataObject {
 			->setRedirectType(BetterButtonCustomAction::REFRESH)			
 		);
 
+		$this->extend('updateBetterButtonsActions', $f);
+
 		return $f;
 	}
 
@@ -88,6 +90,8 @@ class PermamailTemplate extends DataObject {
 			EmailField::create('TestEmailAddress','Test email address'),
 			GridField::create('TestVariables','Test variables', $this->TestVariables(), GridFieldConfig_RecordEditor::create())
 		));
+
+		$this->extend('updateCMSFields', $fields);
 
 		return $fields;
 	}
